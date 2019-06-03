@@ -19,11 +19,19 @@
 
 
 bool 	init_lottery (const char *csv_file, char csv_separator){
-  FILE* fd = fopen("tips1.csv","r");
-  return true;
+  FILE* fd;
+  if (fd = fopen(csv_file,"r")) {
+    return true;
+  }
+  return false;
 }
 bool 	get_tip (int tip_number, int tip[TIP_SIZE]){
-  return true;
+  for (size_t i = 0; i < sizeof(tip); i++) {
+    if (tip_number == tip[i]) {
+      return true;
+    }
+  }
+  return false;
 }
 bool 	set_drawing (int drawing_numbers[TIP_SIZE]){
   return true;
